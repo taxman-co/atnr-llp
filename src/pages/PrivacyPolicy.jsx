@@ -1,9 +1,9 @@
 import React from "react";
 
 export default function PrivacyPolicy() {
-    return (
-        <>
-            <style>{`
+  return (
+    <>
+      <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
 
         :root {
@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
         .privacy-brand {
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 11px;
         }
 
         .privacy-logo {
@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
           font-size: 16px;
           font-weight: 500;
           letter-spacing: .07em;
-          line-height: 1.1;
+          line-height: .95;
           color: var(--ivory);
         }
 
@@ -294,10 +294,13 @@ export default function PrivacyPolicy() {
             height: 72px;
           }
 
-          .privacy-logo {
-            width: 34px;
-            height: 34px;
-            font-size: 17px;
+          .privacy-brand img{
+            width: 42px !important;
+            height: 42px !important;
+          }
+
+          .privacy-brand{
+            gap: 11px;
           }
 
           .privacy-brand-text h1 {
@@ -341,168 +344,168 @@ export default function PrivacyPolicy() {
         }
       `}</style>
 
-            <div className="privacy-page">
-                <nav className="privacy-navbar">
-                    <div className="privacy-nav-inner">
-                        <div className="privacy-brand">
-                            <img
-                                src="/logo.png"
-                                alt="ANDERSON TYSON NATIONAL RECOVERY"
-                                style={{
-                                    width: 42,
-                                    height: 42,
-                                    objectFit: "contain"
-                                }}
-                            />
-                            <div className="privacy-brand-text">
-                                <h1>ANDERSON TYSON</h1>
-                                <span>NATIONAL RECOVERY</span>
-                            </div>
-                        </div>
-
-                        <a href="/" className="privacy-home-btn">
-                            Back to Home
-                        </a>
-                    </div>
-                </nav>
-
-                <section className="privacy-hero">
-                    <div className="privacy-hero-inner">
-                        <div className="privacy-eyebrow">
-                            <div className="privacy-eyebrow-line"></div>
-                            <span>Legal Information</span>
-                        </div>
-
-                        <h2>Privacy Policy</h2>
-
-                        <p>
-                            How Anderson Tyson National Recovery collects, uses, and safeguards your information.
-                        </p>
-                    </div>
-                </section>
-
-                <main className="privacy-content">
-                    <div className="privacy-container">
-                        <div className="privacy-card">
-                            <div className="privacy-meta">
-                                Effective Date: January 1, 2025
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>1. Introduction</h3>
-                                <p>
-                                    Anderson Tyson National Recovery (“we,” “our,” or “us”) respects your privacy and is committed to protecting personal information that you share with us. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or communicate with us.
-                                </p>
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>2. Information We Collect</h3>
-                                <p>We may collect the following types of information:</p>
-
-                                <ul>
-                                    <li>
-                                        <strong>Personal Information:</strong> such as your name, phone number, email address, or mailing address when you contact us.
-                                    </li>
-                                    <li>
-                                        <strong>Non-Personal Information:</strong> such as browser type, IP address, and pages visited, collected automatically through cookies or analytics tools.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>3. How We Use Your Information</h3>
-                                <p>We use collected information to:</p>
-
-                                <ul>
-                                    <li>Respond to inquiries and provide requested legal information.</li>
-                                    <li>Schedule and manage consultations or appointments.</li>
-                                    <li>Improve website functionality and user experience.</li>
-                                    <li>Comply with legal and regulatory obligations.</li>
-                                </ul>
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>4. Sharing of Information</h3>
-                                <p>
-                                    We do not sell or rent your personal information. We may share information only when:
-                                </p>
-
-                                <ul>
-                                    <li>Required by law, court order, or government regulation.</li>
-                                    <li>Necessary to protect our rights, clients, or the public.</li>
-                                    <li>
-                                        With trusted service providers assisting in website or communication support (bound by confidentiality obligations).
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>5. Data Security</h3>
-                                <p>
-                                    We implement reasonable technical and organizational measures to protect your personal information against unauthorized access, disclosure, alteration, or destruction.
-                                </p>
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>6. Your Rights</h3>
-                                <p>
-                                    You may request access to, correction of, or deletion of personal information we hold about you. To exercise these rights, please contact us using the information below.
-                                </p>
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>7. Third-Party Links</h3>
-                                <p>
-                                    Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites.
-                                </p>
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>8. Updates to This Policy</h3>
-                                <p>
-                                    We may update this Privacy Policy from time to time. Any changes will be posted on this page with a revised effective date.
-                                </p>
-                            </div>
-
-                            <div className="privacy-section">
-                                <h3>9. Contact Us</h3>
-
-                                <p>
-                                    If you have questions about this Privacy Policy or how we handle your information, please contact us at:
-                                </p>
-
-                                <div className="privacy-contact">
-                                    <p>
-                                        <strong>ANDERSON TYSON NATIONAL RECOVERY</strong>
-                                        <br />
-                                        4488 Park Lake Drive, Suite 776
-                                        <br />
-                                        Atlanta, GA 30345
-                                        <br />
-                                        Phone: <a href="tel:+14044237063">(404) 423-7063</a>
-                                        <br />
-                                        Email: <a href="mailto:contact@atnr-llp.com">contact@atnr-llp.com</a>
-                                        <br />
-                                        Website: <a href="https://atnr-llp.com">https://atnr-llp.com</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-
-                <footer className="privacy-footer">
-                    <div className="privacy-footer-inner">
-                        <p>
-                            © {new Date().getFullYear()} Anderson Tyson National Recovery. All rights reserved.
-                        </p>
-
-                        <p>
-                            Attorney Advertising. The information on this website does not constitute legal advice and no attorney-client relationship is formed by use of this site.
-                        </p>
-                    </div>
-                </footer>
+      <div className="privacy-page">
+        <nav className="privacy-navbar">
+          <div className="privacy-nav-inner">
+            <div className="privacy-brand">
+              <img
+                src="/logo.png"
+                alt="ANDERSON TYSON NATIONAL RECOVERY"
+                style={{
+                  width: 54,
+                  height: 54,
+                  objectFit: "contain"
+                }}
+              />
+              <div className="privacy-brand-text">
+                <h1>ANDERSON TYSON</h1>
+                <span>NATIONAL RECOVERY</span>
+              </div>
             </div>
-        </>
-    );
+
+            <a href="/" className="privacy-home-btn">
+              Back to Home
+            </a>
+          </div>
+        </nav>
+
+        <section className="privacy-hero">
+          <div className="privacy-hero-inner">
+            <div className="privacy-eyebrow">
+              <div className="privacy-eyebrow-line"></div>
+              <span>Legal Information</span>
+            </div>
+
+            <h2>Privacy Policy</h2>
+
+            <p>
+              How Anderson Tyson National Recovery collects, uses, and safeguards your information.
+            </p>
+          </div>
+        </section>
+
+        <main className="privacy-content">
+          <div className="privacy-container">
+            <div className="privacy-card">
+              <div className="privacy-meta">
+                Effective Date: January 1, 2025
+              </div>
+
+              <div className="privacy-section">
+                <h3>1. Introduction</h3>
+                <p>
+                  Anderson Tyson National Recovery (“we,” “our,” or “us”) respects your privacy and is committed to protecting personal information that you share with us. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or communicate with us.
+                </p>
+              </div>
+
+              <div className="privacy-section">
+                <h3>2. Information We Collect</h3>
+                <p>We may collect the following types of information:</p>
+
+                <ul>
+                  <li>
+                    <strong>Personal Information:</strong> such as your name, phone number, email address, or mailing address when you contact us.
+                  </li>
+                  <li>
+                    <strong>Non-Personal Information:</strong> such as browser type, IP address, and pages visited, collected automatically through cookies or analytics tools.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="privacy-section">
+                <h3>3. How We Use Your Information</h3>
+                <p>We use collected information to:</p>
+
+                <ul>
+                  <li>Respond to inquiries and provide requested legal information.</li>
+                  <li>Schedule and manage consultations or appointments.</li>
+                  <li>Improve website functionality and user experience.</li>
+                  <li>Comply with legal and regulatory obligations.</li>
+                </ul>
+              </div>
+
+              <div className="privacy-section">
+                <h3>4. Sharing of Information</h3>
+                <p>
+                  We do not sell or rent your personal information. We may share information only when:
+                </p>
+
+                <ul>
+                  <li>Required by law, court order, or government regulation.</li>
+                  <li>Necessary to protect our rights, clients, or the public.</li>
+                  <li>
+                    With trusted service providers assisting in website or communication support (bound by confidentiality obligations).
+                  </li>
+                </ul>
+              </div>
+
+              <div className="privacy-section">
+                <h3>5. Data Security</h3>
+                <p>
+                  We implement reasonable technical and organizational measures to protect your personal information against unauthorized access, disclosure, alteration, or destruction.
+                </p>
+              </div>
+
+              <div className="privacy-section">
+                <h3>6. Your Rights</h3>
+                <p>
+                  You may request access to, correction of, or deletion of personal information we hold about you. To exercise these rights, please contact us using the information below.
+                </p>
+              </div>
+
+              <div className="privacy-section">
+                <h3>7. Third-Party Links</h3>
+                <p>
+                  Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites.
+                </p>
+              </div>
+
+              <div className="privacy-section">
+                <h3>8. Updates to This Policy</h3>
+                <p>
+                  We may update this Privacy Policy from time to time. Any changes will be posted on this page with a revised effective date.
+                </p>
+              </div>
+
+              <div className="privacy-section">
+                <h3>9. Contact Us</h3>
+
+                <p>
+                  If you have questions about this Privacy Policy or how we handle your information, please contact us at:
+                </p>
+
+                <div className="privacy-contact">
+                  <p>
+                    <strong>ANDERSON TYSON NATIONAL RECOVERY</strong>
+                    <br />
+                    4488 Park Lake Drive, Suite 776
+                    <br />
+                    Atlanta, GA 30345
+                    <br />
+                    Phone: <a href="tel:+14044237063">(404) 423-7063</a>
+                    <br />
+                    Email: <a href="mailto:contact@atnr-llp.com">contact@atnr-llp.com</a>
+                    <br />
+                    Website: <a href="https://atnr-llp.com">https://atnr-llp.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer className="privacy-footer">
+          <div className="privacy-footer-inner">
+            <p>
+              © {new Date().getFullYear()} Anderson Tyson National Recovery. All rights reserved.
+            </p>
+
+            <p>
+              Attorney Advertising. The information on this website does not constitute legal advice and no attorney-client relationship is formed by use of this site.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </>
+  );
 }
