@@ -89,7 +89,7 @@ export default function PrivacyPolicy() {
 
         .privacy-brand-text h1 {
           font-family: var(--serif);
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 500;
           letter-spacing: .07em;
           line-height: 1.1;
@@ -98,7 +98,7 @@ export default function PrivacyPolicy() {
 
         .privacy-brand-text span {
           font-family: var(--serif);
-          font-size: 10px;
+          font-size: 13px;
           letter-spacing: .12em;
           color: var(--brass);
         }
@@ -301,11 +301,11 @@ export default function PrivacyPolicy() {
           }
 
           .privacy-brand-text h1 {
-            font-size: 11px;
+            font-size: 14px;
           }
 
           .privacy-brand-text span {
-            font-size: 8.5px;
+            font-size: 11.5px;
           }
 
           .privacy-home-btn {
@@ -475,15 +475,15 @@ export default function PrivacyPolicy() {
                                     <p>
                                         <strong>ANDERSON TYSON NATIONAL RECOVERY</strong>
                                         <br />
-                                        3402 Parklake Drive, Suite 558
+                                        4488 Park Lake Drive, Suite 776
                                         <br />
                                         Atlanta, GA 30345
                                         <br />
-                                        Phone: <a href="tel:+14044298930">(404) 429-8930</a>
+                                        Phone: <a href="tel:+14044237063">(404) 423-7063</a>
                                         <br />
                                         Email: <a href="mailto:contact@atnr-llp.com">contact@atnr-llp.com</a>
                                         <br />
-                                        Website: <a href="https://atnr-llp.com">atnr-llp.com</a>
+                                        Website: <a href="https://atnr-llp.com">https://atnr-llp.com</a>
                                     </p>
                                 </div>
                             </div>

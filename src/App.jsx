@@ -35,7 +35,11 @@ const GlobalStyle = () => (
       --serif:'Cormorant Garamond',Georgia,serif;
       --sans:'Montserrat',sans-serif;
     }
-    html{scroll-behavior:smooth;}
+    html{
+      scroll-behavior:smooth;
+      overflow-x:hidden;
+      width:100%;
+    }
     body{background:var(--deep);color:var(--ivory);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
     a{text-decoration:none;color:inherit;}
     button{cursor:pointer;border:none;background:none;}
@@ -53,12 +57,13 @@ const GlobalStyle = () => (
     ::-webkit-scrollbar-thumb{background:var(--brass);}
 
     .mob-panel{
-      position:fixed;top:0;right:0;bottom:0;width:min(310px,86vw);
+      position:fixed;top:0;right:0;bottom:0;width:min(310px,100vw);
       background:#0e0e0e;border-left:1px solid rgba(168,137,92,.18);
       z-index:200;transform:translateX(110%);
       transition:transform .38s cubic-bezier(.22,.61,.36,1);
       display:flex;flex-direction:column;padding:72px 32px 44px;
       overflow-y:auto;
+      box-sizing:border-box;
     }
     .mob-panel.open{transform:translateX(0);}
     .mob-bg{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:199;opacity:0;pointer-events:none;transition:opacity .32s;}
@@ -77,7 +82,10 @@ const GlobalStyle = () => (
       .attorney-grid{grid-template-columns:1fr!important;}
       .about-features{grid-template-columns:1fr!important;}
       .about-intro-grid{grid-template-columns:1fr!important;}
-      .contact-grid{grid-template-columns:1fr!important;}
+      .contact-grid{grid-template-columns:1fr!important; }
+      .contact-grid > *{
+        min-width:0;
+      }
       .results-grid{grid-template-columns:1fr!important;}
     }
     @media(min-width:768px) and (max-width:1099px){
@@ -148,8 +156,8 @@ function Navbar() {
               }}
             />
             <div>
-              <div style={{ fontFamily: "var(--serif)", fontSize: mob ? 11 : 14, fontWeight: 500, color: "var(--ivory)", letterSpacing: "0.07em", lineHeight: 1.25 }}>ANDERSON TYSON</div>
-              <div style={{ fontFamily: "var(--serif)", fontSize: mob ? 10.5 : 12, fontWeight: 400, color: "var(--brass)", letterSpacing: "0.1em", lineHeight: 1.25 }}>NATIONAL RECOVERY</div>
+              <div style={{ fontFamily: "var(--serif)", fontSize: mob ? 14 : 16, fontWeight: 500, color: "var(--ivory)", letterSpacing: "0.07em", lineHeight: 1.25 }}>ANDERSON TYSON</div>
+              <div style={{ fontFamily: "var(--serif)", fontSize: mob ? 11.5 : 13, fontWeight: 400, color: "var(--brass)", letterSpacing: "0.1em", lineHeight: 1.25 }}>NATIONAL RECOVERY</div>
             </div>
           </a>
 
@@ -173,7 +181,7 @@ function Navbar() {
             </div>
           ) : (
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <a href="tel:+14044298930" style={{
+              <a href="tel:+14044237063" style={{
                 fontFamily: "var(--sans)", fontSize: 9.5, fontWeight: 600, letterSpacing: "0.1em",
                 color: "var(--brass)", border: "1px solid rgba(168,137,92,.38)", padding: "6px 12px", textTransform: "uppercase"
               }}>Call Us</a>
@@ -226,7 +234,7 @@ function Navbar() {
           fontFamily: "var(--sans)", fontSize: 10.5, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase"
         }}>Schedule Consultation</a>
         <div style={{ marginTop: "auto", paddingTop: 28 }}>
-          <a href="tel:+14044298930" style={{ fontFamily: "var(--sans)", fontSize: 12, color: "rgba(247,244,238,.38)" }}>(404) 429-8930</a>
+          <a href="tel:+14044237063" style={{ fontFamily: "var(--sans)", fontSize: 12, color: "rgba(247,244,238,.38)" }}>(404) 423-7063</a>
         </div>
       </div>
     </>
@@ -548,12 +556,12 @@ function Contact() {
           {/* Details */}
           <div className={`rv-l ${inView ? "on" : ""}`}>
             {[
-              { label: "Address", content: <a href="https://maps.google.com/?q=3402+Parklake+Drive+Suite+558+Atlanta+GA+30345" target="_blank" rel="noreferrer" style={{ fontFamily: "var(--serif)", fontSize: mob ? 18 : 20, color: "var(--ivory)", lineHeight: 1.6, display: "block", transition: "color .2s" }} onMouseEnter={e => e.currentTarget.style.color = "var(--brass-l)"} onMouseLeave={e => e.currentTarget.style.color = "var(--ivory)"}>3402 Parklake Drive, Suite 558<br />Atlanta, GA 30345</a> },
+              { label: "Address", content: <a href="https://maps.google.com/?q=4488+Park+Lake+Drive+Suite+776+Atlanta+GA+30345" target="_blank" rel="noreferrer" style={{ fontFamily: "var(--serif)", fontSize: mob ? 18 : 20, color: "var(--ivory)", lineHeight: 1.6, display: "block", transition: "color .2s" }} onMouseEnter={e => e.currentTarget.style.color = "var(--brass-l)"} onMouseLeave={e => e.currentTarget.style.color = "var(--ivory)"}>4488 Park Lake Drive, Suite 776<br />Atlanta, GA 30345</a> },
               {
                 label: "Phone",
                 content: (
                   <a
-                    href="tel:+14044298930"
+                    href="tel:+14044237063"
                     style={{
                       fontFamily: "var(--serif)",
                       fontSize: mob ? 28 : 30,
@@ -565,7 +573,7 @@ function Contact() {
                     onMouseEnter={e => e.currentTarget.style.color = "var(--brass-l)"}
                     onMouseLeave={e => e.currentTarget.style.color = "var(--ivory)"}
                   >
-                    (404) 429-8930
+                    (404) 423-7063
                   </a>
                 )
               },
@@ -584,16 +592,22 @@ function Contact() {
           </div>
 
           {/* Map */}
-          <div className={`rv-r ${inView ? "on" : ""}`}>
+          <div
+            className={`rv-r ${inView ? "on" : ""}`}
+            style={{
+              width: "100%",
+              overflow: "hidden"
+            }}
+          >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.0!2d-84.3285!3d33.8501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a3c58c9c9f3f%3A0x1!2s3402+Parklake+Dr+Suite+558%2C+Atlanta%2C+GA+30345!5e0!3m2!1sen!2sus!4v1690000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.0!2d-84.3285!3d33.8501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a3c58c9c9f3f%3A0x1!2s4488+Park+Lake+Drive+Suite+776%2C+Atlanta%2C+GA+30345!5e0!3m2!1sen!2sus!4v1690000000000"
               width="100%" height={mob ? 240 : 380}
-              style={{ border: "none", display: "block", filter: "grayscale(90%) brightness(.7) contrast(1.1)" }}
+              style={{ border: "none", display: "block", filter: "grayscale(90%) brightness(.7) contrast(1.1)", maxWidth: "100%" }}
               allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
               title="atnr Office Location"
             />
             <div style={{ padding: "13px 0", borderTop: "1px solid rgba(168,137,92,.1)" }}>
-              <a href="https://maps.google.com/?q=3402+Parklake+Drive+Suite+558+Atlanta+GA+30345" target="_blank" rel="noreferrer"
+              <a href="https://maps.google.com/?q=4488+Park+Lake+Drive+Suite+776+Atlanta+GA+30345" target="_blank" rel="noreferrer"
                 style={{ fontFamily: "var(--sans)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", color: "var(--brass)", textTransform: "uppercase" }}
               >Get Directions →</a>
             </div>
@@ -615,7 +629,15 @@ function Footer() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 36, flexWrap: "wrap", gap: 24 }}>
           <div style={{ maxWidth: 320 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 11, marginBottom: 13 }}>
-              <div style={{ width: 32, height: 32, border: "1px solid rgba(168,137,92,.4)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--serif)", fontSize: 15, fontWeight: 600, color: "var(--brass)" }}>A</div>
+              <div style={{ width: 32, height: 32, border: "1px solid rgba(168,137,92,.4)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--serif)", fontSize: 15, fontWeight: 600, color: "var(--brass)" }}><img
+                src="/logo.png"
+                alt="ANDERSON TYSON NATIONAL RECOVERY"
+                style={{
+                  width: mob ? 30 : 42,
+                  height: mob ? 30 : 42,
+                  objectFit: "contain"
+                }}
+              /></div>
               <div>
                 <div style={{ fontFamily: "var(--serif)", fontSize: mob ? 11.5 : 12.5, fontWeight: 500, color: "var(--ivory)", letterSpacing: "0.06em" }}>ANDERSON TYSON NATIONAL RECOVERY</div>
                 <div style={{ fontFamily: "var(--sans)", fontSize: 9, fontWeight: 400, letterSpacing: "0.1em", color: "rgba(168,137,92,.6)", textTransform: "uppercase" }}>Debt & Trial Attorneys · Atlanta, GA</div>
